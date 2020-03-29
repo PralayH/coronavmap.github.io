@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet'/>
+    <title>Corona V Map</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #map{
+            width: 100vw;
+            height: 100vh;
+        }
+        .pra{
+           float: left;
+            color: red;
+            margin-left: 70px;
+            font-family: 'Anton', sans-serif;
+            text-align: center;
+            padding: 5px;
+            text-decoration: none;
+
+        }
+
+        .pra a{
+
+            
+            color: red;
+        }
+
+        .pra#blue{
+            color: blue;
+            margin-left: 250px;
+            border: 1px  solid blue;
+            padding: 5px;
+            border-radius: 4px;
+            font-family: 'Roboto', sans-serif;
+        }
+        #blue:hover{
+
+            background-color: blue;
+            color:white;
+        }
+    
+        .pra#red{
+            color: solid red;
+            border: 1px solid red;
+            padding: 5px;
+            border-radius: 4px;
+            font-family: 'Roboto', sans-serif;
+        }
+        #red:hover{
+
+            background-color: red;
+            color: white;
+        }
+        .pra#green{
+
+            color: #30FB0C;
+            border: 1px solid #30FB0C;
+            padding: 5px;
+            border-radius: 4px;
+            font-family: 'Roboto', sans-serif;
+            
+        }
+        #green:hover{
+
+            background-color:#30FB0C;
+            color: white;
+        }
+        
+        #by{
+            float: right;
+            color: solid black;
+            font: bold;
+            margin-right: 50px;
+            padding: 5px;
+            font-family: 'Nanum Gothic', sans-serif;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        #by:hover{
+
+            color: white;
+            background-color: black;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+    <div>
+    <h2 class="pra"><a href="https://webcache.googleusercontent.com/search?q=cache:https://mohfw.gov.in/">Corona V Map</a></h2>
+    <P id="by">Created By  <strong>PRALAY DAS</strong></P>
+    <h3 class="pra" id="blue">Infected</h3>
+    <h3 class="pra" id="red">Dead</h3>
+    <h3 class="pra" id="green">Recovered</h3>
+    </div>
+
+   
+    <div id='map'></div>
+   
+    </body>
+    
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoicHJhbGF5MjkiLCJhIjoiY2s4YmdmazE4MGJ2czNyb2FzbDN5c2dpMSJ9.FmgoJQPkEA_SDZ_zGbvJQA';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/dark-v10',  
+    zoom: 2,
+    center: [30,30]
+  });
+  
+</script>
+<script src="index.js"></script>
+
+</html>
